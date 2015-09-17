@@ -1,0 +1,9 @@
+extends layout.jade
+block contenido
+	center 
+		h2(class="pacifico blue blue") Nuestro selecto menú
+	each producto in datos
+		div(class="col-md-4 col-sm-6 col-xs-12 inline-block pacifico")
+			p(class="big")= producto.nombre
+			p(class="mediano")= "$ " + producto.precio
+			img(src="#{producto.imagen}" class="col-xs-7 col-md-4 no-float")
