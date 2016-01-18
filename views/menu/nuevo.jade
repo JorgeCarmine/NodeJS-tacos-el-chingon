@@ -1,0 +1,16 @@
+extends layout.jade
+block contenido
+	div(class="col-md-5 center-block no-float top-space text-left")
+		h1 Agregar nuevo producto
+		form(action="/guardar-producto" method="post" enctype="multipart/form-data")
+			div(class="form-group")
+				label Nombre
+				input(type="text" name="nombre" placeholder="Nombre del producto" class="form-control" required)
+			div(class="form-group")
+				label Precio
+				input(type="text" name="precio" placeholder="$" class="form-control" required)
+			div(class="form-group")
+				label Imagen del producto
+				input(type="file" name="imagen" required)
+			div(class="form-group text-right")
+				input(type="submit" class="btn btn-primary")

@@ -1,0 +1,25 @@
+extends layout.jade
+block contenido
+	h1 Panel de Administración
+	table(class="table table-striped table-hover")
+		caption Productos actuales
+		thead
+			tr
+				th #
+				th Nombre
+				th Precio
+				th Imágen
+				th Opciones
+		tbody
+			each producto in datos
+				tr
+					td= producto.id
+					td= producto.nombre
+					td= "$ " + producto.precio
+					td
+						img(src="#{producto.imagen}" width="75px" height="75px")
+					td 
+						a(href="/modificar-producto/#{producto.id}") Editar
+						label= "  -  "
+						a(href="/eliminar-producto/#{producto.id}") Eliminar
+	a(href="/nuevo-producto" class="green") Añadir nuevo producto +
