@@ -1,11 +1,11 @@
-# NodeJS-tacos-el-chingon
+# Tacos El Chingon
 
 
-Hola soy Jorge, Tacos el Chingon es un pequeño sistema de gestión de contenido de una pagina web, este sistema MVC fue creado en con Node.js.
+Hola soy Jorge Carmine, Tacos el Chingon es un pequeño sistema de gestión de contenido de una pagina web, este sistema MVC fue creado con Node.js.
 
 /********************************************************************/
 
-- Las vistas son generadas con un preprocesador engine de html llamado jade
+- Las vistas son generadas con el preprocesador engine de html pug (antes jade)
 
 - Las imágenes se suben a la nube con el servicio de cloudinary, cloudinary usa su propia dependencia npm para poder realizar la transferencia
 
@@ -17,26 +17,10 @@ Hola soy Jorge, Tacos el Chingon es un pequeño sistema de gestión de contenido
 	Lista de módulos npm  instalados para realizar este proyecto:
 	
 	express      - para la creación y ejecución el servidor web
-	body-parser  - para el manejo de variables
- 	multer       - para el manejo de archivos a través de un input type file (multer version 0.1.8)
+	body-parser  - para obtener los datos dentro del body de solicitudes http
+ 	multer       - para el manejo de archivos por medio de un form data
 	mongoose     - para la conexión con la base de datos mongodb
 	cloudinary   - para la subida de las imágenes a internet
-
-
-
-/*****************************************************************/
-
-        npm install express --save
-
-        npm install body-parser --save
-        
-        npm install mongoose --save
-        
-        npm install multer@0.1.8 --save
-        
-        npm install cloudinary --save
-        
-/*****************************************************************/
 
 
 
@@ -49,4 +33,4 @@ $ npm instal
 
 /********************************************************************/
 
-*Proyecto desarrollado con fines didácticos... y recreativos :v  :3
+*Proyecto desarrollado con fines didácticos... y recreativos :D

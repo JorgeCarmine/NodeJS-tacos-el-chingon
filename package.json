@@ -1,0 +1,28 @@
+{
+  "name": "tacos-chingon",
+  "version": "1.0.0",
+  "description": "Pequeño sistema de gestión de contenido de una pagina web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeCarmine/nodejs-tacos-el-chingon.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JorgeCarmine/nodejs-tacos-el-chingon/issues"
+  },
+  "homepage": "https://github.com/JorgeCarmine/nodejs-tacos-el-chingon#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cloudinary": "^1.9.1",
+    "express": "^4.16.2",
+    "jade": "^1.11.0",
+    "mongoose": "^4.13.10",
+    "multer": "^1.3.0",
+    "pug": "^2.0.0-rc.4"
+  }
+}
