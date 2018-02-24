@@ -5,6 +5,6 @@ var productoSchema = {
 	imagen:String
 };
 
-var Producto =  mongoose.model("productos", productoSchema);
+var Product =  mongoose.model("products", productoSchema);
 
-module.exports = Producto;
+module.exports = Product;

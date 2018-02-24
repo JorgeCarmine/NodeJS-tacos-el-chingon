@@ -7,7 +7,13 @@ block contenido
 			h2 Login de administración
 			form(method="post" action="/login")
 				div(class="form-group")
+					label Correo electrónico
+					input(type="text" name="email" placeholder="Email"  class="form-control")
 					label Contaseña
 					input(type="password" name="password" placeholder="Contraseña"  class="form-control")
 				div(class="form-group")
 					input(type="submit" class="btn btn-info" value="OK")
+			if (messages.error)
+				.message.error
+				.alert.alert-danger(role='alert')= messages.error
+					

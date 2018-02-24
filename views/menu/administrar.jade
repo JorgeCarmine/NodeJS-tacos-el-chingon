@@ -12,7 +12,8 @@ block contenido
 					th Imágen
 					th Opciones
 			tbody
-				each producto in datos
+			if products.length
+				each producto in products
 					tr
 						td= producto.id
 						td= producto.nombre
@@ -20,7 +21,37 @@ block contenido
 						td
 							img(src="#{producto.imagen}" width="75px" height="75px")
 						td 
-							a(href="/modificar-producto/#{producto.id}") Editar
-							label= "  -  "
-							a(href="/eliminar-producto/#{producto.id}") Eliminar
+							a.btn.btn-primary(href="/modificar-producto/#{producto.id}") Editar&emsp;
+							&emsp;
+							button.btn.btn-danger(type='button', data-toggle='modal', data-target='#deleteModal', data-whatever='#{JSON.stringify(producto)}') Eliminar
+			else
+				tr
+					td(colspan="5") No se encontraron productos
 		a(href="/nuevo-producto" class="green") Añadir nuevo producto +
+
+		#deleteModal.modal.fade
+			.modal-dialog.modal-dialog-centered
+				.modal-content
+					.modal-header
+						h4.modal-title Eliminar producto
+						button.close(type='button', data-dismiss='modal') ×
+					.modal-body
+						| ¿Esta seguro que desea eliminar este producto?
+						br
+						span(class="info-product")
+					.modal-footer
+						button.btn.btn-light(type='button', data-dismiss='modal') Cancelar					
+						button.btn.btn-danger(id="confirmDelete", type='button', data-dismiss='modal') Confirmar Eliminación
+
+	script.
+		var recipient
+		$('#deleteModal').on('show.bs.modal', function (event) {
+			var button = $(event.relatedTarget) // Button that triggered the modal
+			recipient = button.data('whatever') // Extract info from data-* attributes
+			var modal = $(this)
+			modal.find('.info-product').text(recipient.nombre);
+		})
+
+		$('#confirmDelete').click(function() {
+			console.log(recipient);
+		})
