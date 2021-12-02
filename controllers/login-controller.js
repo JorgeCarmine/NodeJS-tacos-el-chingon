@@ -1,5 +1,5 @@
 const auth = require('../lib/auth');
-const Promise = require('bluebird')
+// const Promise = require('bluebird')
 const Product = require('../models/product');
 const User = require('../models/user');
 
