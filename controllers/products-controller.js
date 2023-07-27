@@ -3,9 +3,9 @@ const Product = require('../models/product');
 
 // Configuracion de cloudinary
  cloudinary.config({
-	cloud_name: "dalxumz5k",
-	api_key: "447885593183574",
-	api_secret: "zpm7tEIfu9rpg6PtUB1L5NT1YEc"
+	cloud_name: process.env.CLOUDINARY,
+	api_key: process.env.CLOUDINARY_API_KEY,
+	api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 exports.menu = function(req, res){ // Consulta el munú

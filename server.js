@@ -1,5 +1,4 @@
-console.log("Corriendo el servidor");
-
+require('dotenv').config();
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -7,6 +6,7 @@ const flash = require('express-flash');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const web = require('./routes/web');
+
 
 // const flash = require('connect-flash');
 // const flash = require('express-flash-messages')
@@ -39,8 +39,10 @@ app.use(session({
 
 app.use('/', web);
 
-app.listen(8888, function(){
-	console.log("Servidor Arrancado");
+let port = process.env.PORT;
+
+app.listen(port, function(){
+	console.log(`Server listening on http://localhost:${port}`);
 });
 
 //	╋╋┏┳━━━┳━━━┳━━━┳━━━┓
