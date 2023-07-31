@@ -7,6 +7,7 @@
     "lib": "lib"
   },
   "scripts": {
+    "dev": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,19 +21,19 @@
   },
   "homepage": "https://github.com/JorgeCarmine/tacos-el-chingon#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
-    "cloudinary": "^1.27.1",
+    "body-parser": "^1.20.2",
+    "cloudinary": "^1.40.0",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.3.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-flash": "^0.0.2",
     "express-flash-messages": "^0.1.1",
     "express-messages": "^1.0.1",
-    "express-session": "^1.17.2",
+    "express-session": "^1.17.3",
     "jade": "^1.11.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.0.14",
-    "multer": "^1.4.3",
+    "mongoose": "^6.11.4",
+    "multer": "^1.4.4",
     "path": "^0.12.7",
     "pug": "^3.0.2"
   }
